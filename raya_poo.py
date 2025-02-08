@@ -1,9 +1,11 @@
 # Mixin para imprimir mensajes
 class Mensaje:
   def imprimir_mensaje(self, texto, simbolo = "*", times = 30):
-    print(f"{simbolo*times}")
-    print(f"{simbolo*3} {texto} {simbolo*3}")
-    print(f"{simbolo*times}")
+    bar = f"{simbolo*times}"
+    text = texto.center(times)
+    print(bar)
+    print(text)
+    print(bar)
 
 class Tablero:
   DIRECCIONES = [
